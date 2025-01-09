@@ -1,2 +1,2 @@
 # crossfit
-Website layout about fitness (HTML, CSS, JS)
+Website about fitness (HTML, CSS, JS)
