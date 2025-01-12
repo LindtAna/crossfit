@@ -170,7 +170,7 @@ __________________________________________________________ */
   --border-radius: 30px;
   --border: 1px solid var(--color-light);
 
-  --font-family-base: 'Heebo', sans-serif;
+  --font-family-basic: 'Heebo', sans-serif;
   --font-family-accent: 'Yantramanav', sans-serif;
 
   --input-height: 54px;
@@ -186,7 +186,7 @@ __________________________________________________________ */
 
 
 body {
-  font-family: var(--font-family-base);
+  font-family: var(--font-family-basic);
   font-weight: 300;
   font-size: 16px;
   line-height: 1.75;
