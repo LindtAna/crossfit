@@ -22,13 +22,9 @@
   font-display: swap;
 }
 
-
-
 /**
- Normalise/Reset__________________________________________________________
-__________________________________________________________*/
-
-
+ Normalize / Reset styles
+ */
 *,
 ::before,
 ::after {
@@ -174,7 +170,7 @@ __________________________________________________________ */
   --border-radius: 30px;
   --border: 1px solid var(--color-light);
 
-  --font-family-basic: 'Heebo', sans-serif;
+  --font-family-base: 'Heebo', sans-serif;
   --font-family-accent: 'Yantramanav', sans-serif;
 
   --input-height: 54px;
@@ -190,7 +186,7 @@ __________________________________________________________ */
 
 
 body {
-  font-family: var(--font-family-basic);
+  font-family: var(--font-family-base);
   font-weight: 300;
   font-size: 16px;
   line-height: 1.75;
@@ -778,6 +774,11 @@ input:hover{
   align-items: center;
   text-align: center;
   background-color: var(--color-orange);
+}
+
+
+.location-map iframe {
+  filter: invert(90%) grayscale(100%) brightness(90%) contrast(120%);
 }
 
 .location-title:not(:last-child){
