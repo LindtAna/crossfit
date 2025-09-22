@@ -24,7 +24,8 @@ Das UI-Design basiert auf dem folgenden Figma-Template:
 
 - Custom Video Player realisiert in Vanilla JS  
 - Infinity-Karussell: Endlosschleife von Trainings-Slides, realisiert komplett in CSS  
-- Mobile Navigation per Burger-Button realisiert in Vanilla JS  
+- Mobile Navigation per Burger-Button realisiert in Vanilla JS
+- Eine Google Maps Karte wurde über ein HTML <iframe>-Element eingebettet, um einen Standort responsiv darzustellen, mit optimierter Ladezeit und Sicherheit
 
 ---
 
