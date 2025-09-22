@@ -51,8 +51,8 @@ crossfit/
 - Semantisches HTML und ARIA-Attribute für optimale Zugänglichkeit  
 - Modularer CSS-Ansatz für übersichtliche und wartbare Styles  
 - Reine Vanilla JavaScript-Lösungen ohne externe Bibliotheken  
-- Optimierte Medien und Bildgrößen für schnelle Ladezeiten  
+- Optimierte Medien und Bildgrößen für schnelle Ladezeiten 
+- Die Karte wurde mit CSS-Filtern gestaltet, um sie optisch an das Webseiten-Design anzupassen
 - Ausführlich kommentierter Code und klare README-Dokumentation  
-
 
 
