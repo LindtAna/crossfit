@@ -13,6 +13,7 @@
     <link rel="manifest" href="./favicon/site.webmanifest">
     <script type="module" src="./scripts/BurgerButton.js"></script>
     <script type="module" src="./scripts/VideoPlayer.js"></script>
+    <script type="module" src="./scripts/BMICalculator.js"></script>
 
 </head>
 
@@ -248,9 +249,10 @@
                 </div>
             </div>
         </section>
+
+
         <section class="calculate">
             <div class="calculate-inner container">
-
                 <div class="calculate-body">
                     <h2 class="calculate-title title-medium backdrop-title" data-title="BMI">
                         Input your BMI
@@ -272,21 +274,20 @@
                             <label class="visually-hidden" for="gender" required>Gender</label>
                             <select class="calculate-input input" id="gender">
                                 <option value="" disabled selected>Gender</option>
-                                <option value="male">Male</option>
-                                <option value="female">Female</option>
-                            </select>
-
-                            <label class="visually-hidden" for="activity-factor">Activity Factor</label>
-                            <select class="calculate-input input wide" id="activity-factor" required>
-                                <option value="" disabled selected>Select an activity factor</option>
-                                <option value="light-exercise">Light exercise</option>
-                                <option value="moderate-exercise">Moderate exercise</option>
-                                <option value="heavy-exercise">Heavy exercise</option>
+                                <option  class="option" value="male">Male</option>
+                                <option class="option" value="female">Female</option>
                             </select>
                         </div>
-
-                        <div class="button calculate-button button button-transparent" type="submit">
-                            Calculate
+                        <div class="calculate-actions">
+                            <div class="calculate-buttons">
+                                <button class="button calculate-button button-transparent"
+                                    type="button">Calculate</button>
+                                <button class="button clear-button button-transparent" type="button">Clear</button>
+                            </div>
+                            <div class="calculate-result">
+                                <label class="visually-hidden" for="result">Result</label>
+                                <output class="calculate-output" id="result" name="result"></output>
+                            </div>
                         </div>
                     </form>
                 </div>

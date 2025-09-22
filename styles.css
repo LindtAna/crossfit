@@ -158,7 +158,6 @@ __________________________________________________________ */
 
 
 
-
 :root {
   --colour-dark: #000000;
   --colour-dark-alternate: #131619;
@@ -197,6 +196,7 @@ body {
 a,
 button,
 input,
+output,
 textarea,
 svg * {
   transition-duration: var(--transition-duration);
@@ -261,6 +261,7 @@ h6 {
 .button {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   padding-inline: 26px;
   height: 38px;
   font-weight: 700;
@@ -282,7 +283,7 @@ h6 {
 .button.button-transparent {
   position: relative;
   height: var(--input-height);
-  padding-left: 31px;
+  /* padding-left: 31px; */
   padding-right: 80px;
   background-color: transparent;
   border: var(--border);
@@ -471,6 +472,7 @@ h6 {
   border: none;
 
 }
+
 .banner-pagination-button::after {
   content: '';
   width: 10px;
@@ -758,10 +760,10 @@ input:hover {
   border-color: var(--colour-light);
 }
 
-.input:focus {
+input:focus {
   outline: none;
-  color: var(--colour-dark);
   background-color: var(--colour-orange);
+  color: var(--colour-dark);
 }
 
 .location {
@@ -881,7 +883,6 @@ input:hover {
   display: flex;
   align-items: center;
   column-gap: 36px;
-
 }
 
 .calculate-body {
@@ -905,17 +906,57 @@ input:hover {
 .calculate-form-body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 18px 30px;
-}
-
-.calculate-form-body:not(:last-child) {
+  gap: 15px 15px;
   margin-bottom: 26px;
 }
 
-.calculate-input.wide {
-  grid-column: -1 / 1;
+.calculate-form-body:not(:last-child) {
+  margin-bottom: 15px;
 }
 
+.calculate-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.calculate-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.calculate-output {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  height: var(--input-height);
+  padding-inline: 25px;
+  background-color: transparent;
+  border: var(--border);
+  border-radius: var(--border-radius);
+  color: var(--colour-orange);
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.calculate-output--placeholder {
+  color: var(--colour-light);
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 1.2px;
+
+}
+
+.calculate-input.error {
+  border: 2px solid #ff0000;
+}
+
+.option {
+  background-color: var(--colour-orange);
+}
 
 /* Hide the spin buttons in WebKit browsers */
 .input::-webkit-outer-spin-button,
@@ -928,6 +969,8 @@ input:hover {
 .input[type="number"] {
   -moz-appearance: textfield;
 }
+
+
 
 .calculate-table-wrapper {
   position: relative;
@@ -1077,6 +1120,7 @@ input:hover {
 .footer-subscribe {
   position: relative;
 }
+
 .footer-subscribe-button {
   position: absolute;
   top: 0;
@@ -1254,20 +1298,20 @@ svg * {
 /* 768 BURGER BUTTON OVER MOBILE*/
 
 @media (min-width: 768px) {
-    .header-burger-button {
-        display: none;
-    }
+  .header-burger-button {
+    display: none;
+  }
 
-    .header-close-button {
-        display: none;
-    }
+  .header-close-button {
+    display: none;
+  }
 
-    .header-book-button {
-        padding-inline: 32px;
-        height: 48px;
-        font-size: 14px;
-        letter-spacing: 1.4px;
-    }
+  .header-book-button {
+    padding-inline: 32px;
+    height: 48px;
+    font-size: 14px;
+    letter-spacing: 1.4px;
+  }
 }
 
 /* 767  MOBILE */
@@ -1282,15 +1326,15 @@ svg * {
   } */
 
   .header-logo {
-  width: 73px;
-  height: auto;
-  align-items: start;
-}
+    width: 73px;
+    height: auto;
+    align-items: start;
+  }
 
-.footer-logo-image {
-  width: 150px;
-  height: auto;
-}
+  .footer-logo-image {
+    width: 150px;
+    height: auto;
+  }
 
   /* > MOBILE OVERLAY MENU & CLOSE BUTTON */
   .header-menu {
@@ -1346,7 +1390,7 @@ svg * {
     color: var(--colour-orange);
   }
 
-/* /> MOBILE OVERLAY MENU & CLOSE BUTTON */
+  /* /> MOBILE OVERLAY MENU & CLOSE BUTTON */
 
   .banner-info {
     margin-bottom: 5px;
