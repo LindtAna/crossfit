@@ -22,9 +22,10 @@ Das UI-Design basiert auf dem folgenden Figma-Template:
 
 ## Funktionalität
 
-- Custom Video Player realisiert in Vanilla JS  
+- Custom Video Player realisiert mit Vanilla JS  
 - Infinity-Karussell: Endlosschleife von Trainings-Slides, realisiert komplett in CSS  
-- Mobile Navigation per Burger-Button realisiert in Vanilla JS
+- Mobile Navigation per Burger-Button realisiert mit Vanilla JS
+- BMI-Rechner mit Vanilla JS: Berechnet den Body-Mass-Index
 - Eine Google Maps Karte wurde über ein HTML <iframe>-Element eingebettet, um einen Standort responsiv darzustellen, mit optimierter Ladezeit und Sicherheit
 
 ---
@@ -39,6 +40,7 @@ crossfit/
 ├── fonts/
 ├── icons/
 ├── scripts/
+│   ├── BMICalculator.js
 │   ├── BurgerButton.js
 │   └── VideoPlayer.js
 ├── index.html
@@ -52,7 +54,7 @@ crossfit/
 - Modularer CSS-Ansatz für übersichtliche und wartbare Styles  
 - Reine Vanilla JavaScript-Lösungen ohne externe Bibliotheken  
 - Optimierte Medien und Bildgrößen für schnelle Ladezeiten 
-- Die Karte wurde mit CSS-Filtern gestaltet, um sie optisch an das Webseiten-Design anzupassen
+- Die Google-Maps Karte wurde mit CSS-Filtern gestaltet, um sie optisch an das Webseiten-Design anzupassen
 - Ausführlich kommentierter Code und klare README-Dokumentation  
 
 
