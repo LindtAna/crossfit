@@ -818,15 +818,45 @@ margin-bottom: 14px;
 }
 
 .family-body {
-  display: flex;
-  justify-content: center;
-  column-gap: 26px;
-  scroll-snap-type: x mandatory;
-  overflow-x: scroll;
+  overflow: hidden; /* Скрываем лишние изображения за пределами контейнера */
+  position: relative;
+  width: 100%;
 }
 
+.carousel-track {
+  display: flex;
+  column-gap: 26px; /* Сохраняем ваш зазор между изображениями */
+  animation: scroll 20s linear infinite; /* Анимация прокрутки */
+  width: max-content; /* Ширина трека определяется содержимым */
+}
+
+.carousel-track:hover {
+  animation-play-state: paused;
+}
 .family-image {
-  scroll-snap-align: start;
+  flex-shrink: 0; /* Изображения не сжимаются */
+  height: 479px; /* Фиксируем высоту для единообразия */
+  object-fit: cover; /* Для корректного отображения изображений */
+}
+
+/* Анимация для бесконечной прокрутки */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Сдвиг на половину длины трека (так как изображения дублированы) */
+  }
+}
+
+
+/* Отключение интерактивной прокрутки */
+.family-body::-webkit-scrollbar {
+  display: none; /* Скрываем полосу прокрутки в WebKit-браузерах */
+}
+.family-body {
+  -ms-overflow-style: none; /* Для Edge */
+  scrollbar-width: none; /* Для Firefox */
 }
 
 
