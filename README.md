@@ -2,7 +2,7 @@
 
 ## Live Demo
 
-[Zur Live-Demo](https://lindtana.github.io/crossfit)
+[Live-Demo](https://lindtana.github.io/crossfit)
 
 ---
 
