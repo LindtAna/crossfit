@@ -818,45 +818,47 @@ margin-bottom: 14px;
 }
 
 .family-body {
-  overflow: hidden; /* Скрываем лишние изображения за пределами контейнера */
+  overflow: hidden; 
   position: relative;
   width: 100%;
 }
 
+/* Container für die Bilder im Karussell, mit Animation für Endlos-Scrolling */
 .carousel-track {
   display: flex;
-  column-gap: 26px; /* Сохраняем ваш зазор между изображениями */
-  animation: scroll 20s linear infinite; /* Анимация прокрутки */
-  width: max-content; /* Ширина трека определяется содержимым */
+  column-gap: 26px; 
+  animation: scroll 20s linear infinite;  /* Endlose Animation für das Scrolling */
+  width: max-content; 
 }
 
+/* Pausiert die Animation beim Hovern über das Karussell */
 .carousel-track:hover {
   animation-play-state: paused;
 }
 .family-image {
-  flex-shrink: 0; /* Изображения не сжимаются */
-  height: 479px; /* Фиксируем высоту для единообразия */
-  object-fit: cover; /* Для корректного отображения изображений */
+  flex-shrink: 0; 
+  height: 479px; 
+  object-fit: cover; 
 }
 
-/* Анимация для бесконечной прокрутки */
+/* Keyframes für die Endlos-Scrolling-Animation */
 @keyframes scroll {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%); /* Сдвиг на половину длины трека (так как изображения дублированы) */
+    transform: translateX(-50%); 
   }
 }
 
 
-/* Отключение интерактивной прокрутки */
+
 .family-body::-webkit-scrollbar {
-  display: none; /* Скрываем полосу прокрутки в WebKit-браузерах */
+  display: none; 
 }
 .family-body {
-  -ms-overflow-style: none; /* Для Edge */
-  scrollbar-width: none; /* Для Firefox */
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
 }
 
 
