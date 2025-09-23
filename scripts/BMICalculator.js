@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
         resultOutput.textContent = ''; 
         toggleError(false);
         // placeholder für das Ausgabefeld wiederherstellen
-        resultOutput.textContent = 'Result';
+        resultOutput.textContent = 'RESULT';
         resultOutput.classList.add('calculate-output--placeholder');
     });
 });
